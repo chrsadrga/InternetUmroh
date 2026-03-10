@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paket Internet Umroh & Haji - Sinyal Kuat, Fokus Ibadah | Digitravel</title>
+    <title>Paket Internet Umroh & Haji - Cepat & Langsung Aktif | Digitravel</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Beli paket internet Umroh dan Haji murah, sinyal kuat di Arab Saudi tanpa ganti kartu. Harga jujur, langsung aktif. Beli sekarang di Digitravel.">
-    <meta name="keywords" content="paket internet umroh, esim umroh, roaming arab saudi, internet haji, digitravel">
+    <meta name="description" content="Beli paket internet Umroh dan Haji murah, sinyal kuat di Arab Saudi tanpa ganti kartu. Harga transparan, langsung aktif.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Tailwind Custom Config untuk Branding -->
+    <!-- Tailwind Custom Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -21,18 +19,18 @@
                         brand: {
                             start: '#86A028',
                             end: '#A4BF32',
-                            50: '#f4f7eb', // Tint sangat muda untuk background alternatif
+                            50: '#f4f7eb',
                             100: '#e5edcf',
                             500: '#A4BF32', 
-                            600: '#86A028', // Warna gelap untuk hover
+                            600: '#86A028',
                             900: '#3a4711',
                         },
                         accent: {
-                            500: '#F8C154', // Kuning/Emas untuk CTA
-                            600: '#e5b24c', // Kuning gelap untuk Hover
+                            500: '#F8C154', 
+                            600: '#e5b24c', 
                         },
-                        ink: '#06141C',   // Navy/Hitam untuk Teks
-                        paper: '#FCFCFC', // Off-white untuk Background utama
+                        ink: '#06141C',   
+                        paper: '#FCFCFC', 
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -43,32 +41,42 @@
     </script>
     
     <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* CSS tambahan untuk memastikan teks terpotong rapi di kotak kecil */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+        /* Mengurangi ukuran scrollbar agar lebih rapi */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FCFCFC; }
+        ::-webkit-scrollbar-thumb { background: #A4BF32; border-radius: 10px; }
+    </style>
 </head>
 <body class="font-sans antialiased text-ink bg-paper relative pb-20 md:pb-0">
 
-    <!-- Navbar -->
-    <header class="fixed w-full bg-paper/90 backdrop-blur-md shadow-sm z-50 border-b border-slate-200">
+    <!-- Navbar Compact -->
+    <header class="fixed w-full bg-paper/95 backdrop-blur-md shadow-sm z-50 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo Placeholder -->
+            <div class="flex justify-between items-center h-14">
                 <div class="flex-shrink-0 flex items-center gap-2">
-                    <div class="w-8 h-8 bg-gradient-to-br from-brand-start to-brand-end rounded-lg flex items-center justify-center text-paper font-bold">D</div>
-                    <span class="font-bold text-xl text-ink tracking-tight">Digitravel</span>
+                    <!-- Ganti src ini dengan URL file logo asli Anda -->
+                    <img src="https://placehold.co/120x40/FCFCFC/86A028?text=Logo" alt="UMRA by DIGITRAVEL" class="h-8 w-auto object-contain">
+                    <span class="font-extrabold text-sm md:text-lg text-ink tracking-tight leading-none hidden sm:block">UMRA<br><span class="text-[10px] md:text-xs text-slate-500 font-medium">by DIGITRAVEL</span></span>
                 </div>
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#keunggulan" class="text-slate-600 hover:text-brand-600 font-medium transition">Keunggulan</a>
-                    <a href="#paket" class="text-slate-600 hover:text-brand-600 font-medium transition">Pilihan Paket</a>
-                    <a href="#cara-kerja" class="text-slate-600 hover:text-brand-600 font-medium transition">Cara Kerja</a>
-                </nav>
-                <!-- Desktop CTA -->
-                <div class="hidden md:flex items-center">
-                    <a href="#paket" class="bg-gradient-to-r from-brand-start to-brand-end hover:from-brand-600 hover:to-brand-start text-paper px-5 py-2.5 rounded-full font-semibold transition shadow-md shadow-brand-500/30">
-                        Beli Sekarang
+                <div class="hidden md:flex items-center gap-4">
+                    <!-- WhatsApp Icon di Desktop Navbar -->
+                    <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center gap-1.5 text-ink hover:text-[#25D366] font-medium text-sm transition">
+                        <i class="ph-fill ph-whatsapp text-[#25D366] text-xl"></i> Tanya CS
+                    </a>
+                    <a href="#paket" class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-4 py-1.5 rounded-full font-semibold text-sm transition hover:shadow-lg">
+                        Lihat Paket
                     </a>
                 </div>
             </div>
@@ -76,436 +84,417 @@
     </header>
 
     <main>
+        <!-- Responsive Banner Section -->
+        <section class="pt-14 w-full bg-slate-50 border-b border-slate-200">
+            <!-- Penggunaan tag picture memastikan browser hanya memuat 1 gambar sesuai ukuran layar -->
+            <picture>
+                <!-- Ganti srcset ini dengan URL Banner Desktop Anda (Saran Rasio: Memanjang / 1920x500) -->
+                <source media="(min-width: 768px)" srcset="https://placehold.co/1920x500/86A028/FCFCFC?text=Banner+Desktop+(1920x500)">
+                <!-- Ganti src ini dengan URL Banner Mobile Anda (Saran Rasio: Kotak / 800x800 agar teks terbaca jelas di HP) -->
+                <img src="https://placehold.co/800x800/86A028/FCFCFC?text=Banner+Mobile+(800x800)" alt="Promo Umroh Spesial" class="w-full h-auto object-cover">
+            </picture>
+        </section>
+
         <!-- Hero Section -->
-        <section class="pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden relative">
+        <section class="py-8 md:py-12 overflow-hidden relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Hero Text -->
-                    <div class="max-w-2xl">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 font-medium text-sm mb-6 border border-brand-100">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    
+                    <!-- Kolom Teks -->
+                    <div class="max-w-xl">
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 text-brand-600 font-semibold text-xs mb-4 border border-brand-100">
                             <i class="ph-fill ph-check-circle"></i> Sinyal Kuat di Mekkah & Madinah
                         </div>
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-ink leading-tight mb-6">
-                            Fokus Ibadah, <br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-start to-brand-end">Urusan Sinyal Serahkan Pada Kami.</span>
+                        <h1 class="text-3xl md:text-5xl font-extrabold text-ink leading-tight mb-4">
+                            Fokus Ibadah, <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-start to-brand-end">Sinyal Biar Kami Yang Urus.</span>
                         </h1>
-                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                            Paket internet langsung aktif saat mendarat di Arab Saudi. Tanpa antre beli kartu lokal, tanpa tagihan roaming bengkak. Harga transparan.
+                        <p class="text-base text-slate-600 mb-6">
+                            Langsung aktif saat mendarat. Tanpa antre kartu lokal, harga transparan sesuai syariat.
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#paket" class="bg-accent-500 hover:bg-accent-600 text-ink px-8 py-3.5 rounded-full font-bold text-lg text-center transition shadow-lg shadow-accent-500/30 flex items-center justify-center gap-2">
-                                <i class="ph-bold ph-shopping-cart"></i> Lihat Paket Promo
+                        <div class="flex gap-3">
+                            <a href="#paket" class="flex-1 bg-accent-500 text-ink py-3 rounded-xl font-bold text-center shadow-md shadow-accent-500/20 active:scale-95 transition-transform flex items-center justify-center">
+                                Pilih Paket
                             </a>
-                            <a href="https://wa.me/6281234567890" target="_blank" class="bg-paper hover:bg-slate-50 text-ink border border-slate-300 px-8 py-3.5 rounded-full font-bold text-lg text-center transition flex items-center justify-center gap-2">
-                                <i class="ph-fill ph-whatsapp text-[#25D366] text-xl"></i> Tanya CS
+                            <!-- Tombol WA -->
+                            <a href="https://wa.me/6281234567890" target="_blank" class="flex-none bg-[#25D366] hover:bg-[#20bd5a] text-white w-14 flex items-center justify-center rounded-xl active:scale-95 transition-all shadow-md shadow-[#25D366]/30">
+                                <i class="ph-fill ph-whatsapp text-2xl"></i>
                             </a>
-                        </div>
-                        
-                        <!-- Trust Indicators -->
-                        <div class="mt-10 pt-6 border-t border-slate-200 flex flex-wrap gap-6 items-center">
-                            <div class="text-sm text-slate-500">Didukung oleh jaringan terbaik:</div>
-                            <div class="flex gap-4 opacity-70 grayscale">
-                                <span class="font-bold text-lg">ZAIN</span>
-                                <span class="font-bold text-lg">STC</span>
-                                <span class="font-bold text-lg">MOBILY</span>
-                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Hero Image Placeholder -->
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-100 to-brand-50 rounded-[3rem] transform rotate-3 scale-105 -z-10"></div>
-                        <img src="https://placehold.co/600x700/86A028/FCFCFC?text=[Ilustrasi+Jamaah+Main+HP+di+Mekkah]" alt="Jamaah Umroh menggunakan internet" class="rounded-[3rem] shadow-2xl object-cover w-full h-auto border-4 border-paper">
+
+                    <!-- Kolom Gambar -->
+                    <div class="relative hidden md:block px-4 lg:px-8">
+                        <div class="absolute inset-0 bg-[#eef3de] rounded-[2.5rem] transform translate-x-3 -translate-y-3 lg:translate-x-6 lg:-translate-y-6 -z-10"></div>
                         
-                        <!-- Floating Badge -->
-                        <div class="absolute -bottom-6 -left-6 bg-paper p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-slate-100 animate-bounce" style="animation-duration: 3s;">
-                            <div class="w-12 h-12 bg-accent-500/20 rounded-full flex items-center justify-center text-accent-600">
-                                <i class="ph-fill ph-star text-2xl"></i>
+                        <img src="https://placehold.co/600x650/86A028/FCFCFC?text=[Ilustrasi+Jamaah+Main+HP+di+Mekkah]" alt="Jamaah Umroh menggunakan internet" class="rounded-[2.5rem] shadow-md object-cover w-full h-auto border-4 border-paper aspect-[4/5]">
+                        
+                        <!-- Floating Badge Rating -->
+                        <div class="absolute -bottom-4 -left-2 lg:-left-6 bg-paper px-4 py-3 lg:px-5 lg:py-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center gap-3 lg:gap-4 border border-slate-100 z-10">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 bg-accent-500/10 rounded-full flex items-center justify-center text-accent-500">
+                                <i class="ph-fill ph-star text-xl lg:text-2xl"></i>
                             </div>
                             <div>
-                                <div class="font-bold text-ink">4.9/5 Rating</div>
-                                <div class="text-sm text-slate-500">Dari 5,000+ Jamaah</div>
+                                <div class="font-bold text-ink text-sm lg:text-base leading-tight">4.9/5 Rating</div>
+                                <div class="text-[10px] lg:text-xs text-slate-500 mt-0.5">Dari 5,000+ Jamaah</div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Keunggulan Section -->
-        <section id="keunggulan" class="py-16 bg-brand-50/50">
+        <!-- KATALOG PRODUK (DIPINDAH KE ATAS) -->
+        <section id="paket" class="py-12 bg-slate-50 border-t border-slate-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl font-bold text-ink mb-4">Mengapa Menggunakan Paket Kami?</h2>
-                    <p class="text-slate-600">Kami merancang pengalaman berinternet yang paling minim risiko agar ibadah Anda tidak terganggu urusan teknis.</p>
-                </div>
                 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="p-8 rounded-3xl bg-paper border border-slate-200 hover:shadow-lg hover:border-brand-500 transition-all group">
-                        <div class="w-14 h-14 bg-gradient-to-br from-brand-start to-brand-end rounded-2xl flex items-center justify-center text-paper text-3xl mb-6 group-hover:scale-110 transition shadow-md shadow-brand-500/20">
-                            <i class="ph-fill ph-lightning"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-ink mb-3">Langsung Aktif (Plug & Play)</h3>
-                        <p class="text-slate-600">Begitu pesawat mendarat di Jeddah atau Madinah, sinyal langsung menyala. Tanpa perlu setting APN atau registrasi paspor yang rumit.</p>
-                    </div>
-                    
-                    <div class="p-8 rounded-3xl bg-paper border border-slate-200 hover:shadow-lg hover:border-brand-500 transition-all group">
-                        <div class="w-14 h-14 bg-gradient-to-br from-brand-start to-brand-end rounded-2xl flex items-center justify-center text-paper text-3xl mb-6 group-hover:scale-110 transition shadow-md shadow-brand-500/20">
-                            <i class="ph-fill ph-wallet"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-ink mb-3">Harga Jujur & Transparan</h3>
-                        <p class="text-slate-600">Sistem beli putus. Tidak ada biaya langganan harian yang tiba-tiba menyedot pulsa utama Anda.</p>
-                    </div>
-
-                    <div class="p-8 rounded-3xl bg-paper border border-slate-200 hover:shadow-lg hover:border-brand-500 transition-all group">
-                        <div class="w-14 h-14 bg-gradient-to-br from-brand-start to-brand-end rounded-2xl flex items-center justify-center text-paper text-3xl mb-6 group-hover:scale-110 transition shadow-md shadow-brand-500/20">
-                            <i class="ph-fill ph-shield-check"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-ink mb-3">Sinyal Prioritas</h3>
-                        <p class="text-slate-600">Otomatis terhubung ke jaringan operator terbaik (Zain, STC, atau Mobily) tergantung lokasi Anda.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pilihan Paket Section -->
-        <section id="paket" class="py-20 bg-paper border-t border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-ink mb-4">Pilih Paket Sesuai Kebutuhan</h2>
-                    <p class="text-slate-600 text-lg">Pilih metode yang paling nyaman untuk Anda: <strong>eSIM</strong> (digital) atau <strong>SIM Card Fisik</strong>.</p>
-                </div>
-
-                <!-- Bagian 1: eSIM Umroh -->
-                <div class="mb-20">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div class="w-12 h-12 bg-gradient-to-br from-brand-start to-brand-end rounded-xl flex items-center justify-center text-paper text-2xl shadow-sm">
+                <!-- eSIM Section -->
+                <div class="mb-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 text-xl shadow-sm border border-brand-200/50">
                             <i class="ph-bold ph-qr-code"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-ink">Paket eSIM Umroh</h3>
-                            <p class="text-slate-500">Praktis. Barcode langsung dikirim via Email/WA. Bebas ongkir.</p>
+                            <h2 class="text-xl font-bold text-ink leading-tight">eSIM Umroh (Digital)</h2>
+                            <p class="text-xs text-slate-500">Barcode dikirim instan via Email/WA.</p>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                        <!-- PRODUCT eSIM 1 -->
-                        <a href="https://digitravel.store/esim/umra-by-digitravel-esim-arab-saudi-umroh-haji-mekkah-unlimited-gaau8oss3xe" class="group relative bg-paper rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-brand-500 transition-all duration-300 flex flex-col" target="_blank" rel="noopener noreferrer">
-                            <div class="relative aspect-square overflow-hidden bg-slate-100">
-                                <img src="https://placehold.co/500x500/E5E7EB/A1A1AA?text=Gambar+Produk+1" alt="UMRA SIM Card Kuota 20GB" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
-                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                        Select Options
-                                    </div>
-                                </div>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+                        <!-- Produk eSIM 1 -->
+                        <a href="#" class="group bg-paper border border-slate-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors flex flex-col shadow-sm">
+                            <div class="aspect-square bg-slate-100 relative">
+                                <img src="https://placehold.co/400x400/E5E7EB/A1A1AA?text=eSIM+1" class="w-full h-full object-cover mix-blend-multiply" alt="eSIM">
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <h3 class="text-sm font-bold text-ink mb-4 line-clamp-3 leading-snug group-hover:text-brand-600 transition-colors">UMRA by DIGITRAVEL eSIM Arab Saudi Umroh Haji Mekkah Unlimited</h3>
-                                <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col">
-                                    <span class="text-xs text-slate-500 font-medium mb-1">Mulai dari:</span>
-                                    <span class="text-lg font-extrabold text-brand-600">Rp39.000</span>
+                            <div class="p-3 flex flex-col flex-grow">
+                                <h3 class="text-xs md:text-sm font-bold text-ink line-clamp-2 mb-2 group-hover:text-brand-600">eSIM Arab Saudi Umroh Mekkah Unlimited</h3>
+                                <div class="mt-auto">
+                                    <span class="text-[10px] text-slate-500 block mb-0.5">Mulai dari</span>
+                                    <div class="text-sm md:text-lg font-extrabold text-brand-600">Rp39.000</div>
+                                </div>
+                                <div class="mt-3 bg-brand-50 text-brand-600 text-xs text-center py-2 rounded-lg font-bold group-hover:bg-gradient-to-r group-hover:from-brand-start group-hover:to-brand-end group-hover:text-paper transition-all">
+                                    Pilih Paket
                                 </div>
                             </div>
                         </a>
 
-                        <!-- PRODUCT eSIM 2 -->
-                        <a href="https://digitravel.store/esim/umra-by-digitravel-esim-arab-saudi-haji-umroh-kuota-besar-bsncaqjlczy" class="group relative bg-paper rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-brand-500 transition-all duration-300 flex flex-col" target="_blank" rel="noopener noreferrer">
-                            <div class="relative aspect-square overflow-hidden bg-slate-100">
-                                <img src="https://placehold.co/500x500/E5E7EB/A1A1AA?text=Gambar+Produk+2" alt="UMRA SIM Card Unlimited" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
-                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                        Select Options
-                                    </div>
-                                </div>
+                        <!-- Produk eSIM 2 -->
+                        <a href="#" class="group bg-paper border border-slate-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors flex flex-col shadow-sm">
+                            <div class="aspect-square bg-slate-100 relative">
+                                <div class="absolute top-2 right-2 bg-accent-500 text-ink text-[9px] font-bold px-2 py-0.5 rounded-full z-10 shadow-sm">TERLARIS</div>
+                                <img src="https://placehold.co/400x400/E5E7EB/A1A1AA?text=eSIM+2" class="w-full h-full object-cover mix-blend-multiply" alt="eSIM">
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <h3 class="text-sm font-bold text-ink mb-4 line-clamp-3 leading-snug group-hover:text-brand-600 transition-colors">UMRA by DIGITRAVEL eSIM Arab Saudi Haji Umroh Kuota Besar</h3>
-                                <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col">
-                                    <span class="text-xs text-slate-500 font-medium mb-1">Mulai dari:</span>
-                                    <span class="text-lg font-extrabold text-brand-600">Rp43.000</span>
+                            <div class="p-3 flex flex-col flex-grow">
+                                <h3 class="text-xs md:text-sm font-bold text-ink line-clamp-2 mb-2 group-hover:text-brand-600">eSIM Arab Saudi Haji Umroh Kuota Besar</h3>
+                                <div class="mt-auto">
+                                    <span class="text-[10px] text-slate-500 block mb-0.5">Mulai dari</span>
+                                    <div class="text-sm md:text-lg font-extrabold text-brand-600">Rp43.000</div>
                                 </div>
-                            </div>
-                        </a>
-
-                        <!-- PRODUCT eSIM 3 -->
-                        <a href="https://digitravel.store/esim/umra-by-digitravel-esim-arab-saudi-umroh-haji-mekkah-kuwait-oman-qatar-unlimited-l5fvgjml0am" class="group relative bg-paper rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-brand-500 transition-all duration-300 flex flex-col" target="_blank" rel="noopener noreferrer">
-                            <div class="relative aspect-square overflow-hidden bg-slate-100">
-                                <img src="https://placehold.co/500x500/E5E7EB/A1A1AA?text=Gambar+Produk+3" alt="SIM Card Europe Turkey USA" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
-                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                        Select Options
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <h3 class="text-sm font-bold text-ink mb-4 line-clamp-3 leading-snug group-hover:text-brand-600 transition-colors">UMRA by DIGITRAVEL eSIM Arab Saudi Umroh Haji Mekkah Kuwait Oman Qatar Unlimited</h3>
-                                <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col">
-                                    <span class="text-xs text-slate-500 font-medium mb-1">Mulai dari:</span>
-                                    <span class="text-lg font-extrabold text-brand-600">Rp104.000</span>
+                                <div class="mt-3 bg-brand-50 text-brand-600 text-xs text-center py-2 rounded-lg font-bold group-hover:bg-gradient-to-r group-hover:from-brand-start group-hover:to-brand-end group-hover:text-paper transition-all">
+                                    Pilih Paket
                                 </div>
                             </div>
                         </a>
 
-                        <!-- PRODUCT eSIM 4 -->
-                        <a href="https://digitravel.store/esim/umra-by-digitravel-esim-arab-saudi-umroh-haji-kuota-besar-xm0qerunhxi" class="group relative bg-paper rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-brand-500 transition-all duration-300 flex flex-col" target="_blank" rel="noopener noreferrer">
-                            <div class="relative aspect-square overflow-hidden bg-slate-100">
-                                <img src="https://placehold.co/500x500/E5E7EB/A1A1AA?text=Gambar+Produk+4" alt="SIM Card Europe Turkey USA" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
-                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                        Select Options
-                                    </div>
+                        <!-- Produk eSIM 3 -->
+                        <a href="#" class="group bg-paper border border-slate-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors flex flex-col shadow-sm">
+                            <div class="aspect-square bg-slate-100 relative">
+                                <img src="https://placehold.co/400x400/E5E7EB/A1A1AA?text=eSIM+3" class="w-full h-full object-cover mix-blend-multiply" alt="eSIM">
+                            </div>
+                            <div class="p-3 flex flex-col flex-grow">
+                                <h3 class="text-xs md:text-sm font-bold text-ink line-clamp-2 mb-2 group-hover:text-brand-600">eSIM Arab Saudi + Timur Tengah Unlimited</h3>
+                                <div class="mt-auto">
+                                    <span class="text-[10px] text-slate-500 block mb-0.5">Mulai dari</span>
+                                    <div class="text-sm md:text-lg font-extrabold text-brand-600">Rp104.000</div>
+                                </div>
+                                <div class="mt-3 bg-brand-50 text-brand-600 text-xs text-center py-2 rounded-lg font-bold group-hover:bg-gradient-to-r group-hover:from-brand-start group-hover:to-brand-end group-hover:text-paper transition-all">
+                                    Pilih Paket
                                 </div>
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <h3 class="text-sm font-bold text-ink mb-4 line-clamp-3 leading-snug group-hover:text-brand-600 transition-colors">UMRA by DIGITRAVEL eSIM Arab Saudi Umroh Haji Kuota Besar</h3>
-                                <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col">
-                                    <span class="text-xs text-slate-500 font-medium mb-1">Mulai dari:</span>
-                                    <span class="text-lg font-extrabold text-brand-600">Rp479.000</span>
+                        </a>
+
+                        <!-- Produk eSIM 4 -->
+                        <a href="#" class="group bg-paper border border-slate-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors flex flex-col shadow-sm">
+                            <div class="aspect-square bg-slate-100 relative">
+                                <img src="https://placehold.co/400x400/E5E7EB/A1A1AA?text=eSIM+4" class="w-full h-full object-cover mix-blend-multiply" alt="eSIM">
+                            </div>
+                            <div class="p-3 flex flex-col flex-grow">
+                                <h3 class="text-xs md:text-sm font-bold text-ink line-clamp-2 mb-2 group-hover:text-brand-600">eSIM Arab Saudi Premium Kuota Super Besar</h3>
+                                <div class="mt-auto">
+                                    <span class="text-[10px] text-slate-500 block mb-0.5">Mulai dari</span>
+                                    <div class="text-sm md:text-lg font-extrabold text-brand-600">Rp479.000</div>
+                                </div>
+                                <div class="mt-3 bg-brand-50 text-brand-600 text-xs text-center py-2 rounded-lg font-bold group-hover:bg-gradient-to-r group-hover:from-brand-start group-hover:to-brand-end group-hover:text-paper transition-all">
+                                    Pilih Paket
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
 
-                <!-- Bagian 2: SIM Card Fisik -->
-                <div>
-                    <div class="flex items-center gap-4 mb-8 pt-8 border-t border-slate-200">
-                        <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-700 text-2xl shadow-sm border border-slate-200">
+                <!-- SIM Card Fisik Section -->
+                <div class="pt-8 border-t border-slate-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-paper border border-slate-200 rounded-lg flex items-center justify-center text-slate-600 text-xl shadow-sm">
                             <i class="ph-bold ph-sim-card"></i>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold text-ink">Paket SIM Card Fisik</h3>
-                            <p class="text-slate-500">Dikirim ke rumah Anda sebelum berangkat. Tinggal pasang di pesawat.</p>
+                            <h2 class="text-xl font-bold text-ink leading-tight">SIM Card Fisik</h2>
+                            <p class="text-xs text-slate-500">Dikirim ke rumah, tinggal pasang.</p>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                        
-                        <!-- PRODUCT Fisik 1 -->
-                        <a href="#" class="group relative bg-paper rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-brand-500 transition-all duration-300 flex flex-col">
-                            <div class="relative aspect-square overflow-hidden bg-slate-100">
-                                <img src="https://placehold.co/500x500/E5E7EB/A1A1AA?text=SIM+Fisik+1" alt="SIM Card Fisik Hemat" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
-                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                        Select Options
-                                    </div>
-                                </div>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+                        <!-- Produk Fisik 1 -->
+                        <a href="#" class="group bg-paper border border-slate-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors flex flex-col shadow-sm">
+                            <div class="aspect-square bg-slate-100 relative">
+                                <img src="https://placehold.co/400x400/E5E7EB/A1A1AA?text=Fisik+1" class="w-full h-full object-cover mix-blend-multiply" alt="SIM Fisik">
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <h3 class="text-sm font-bold text-ink mb-4 line-clamp-3 leading-snug group-hover:text-brand-600 transition-colors">SIM Card Fisik Umroh Arab Saudi Kuota 5GB</h3>
-                                <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col">
-                                    <span class="text-xs text-slate-500 font-medium mb-1">Mulai dari:</span>
-                                    <span class="text-lg font-extrabold text-brand-600">Rp160.000</span>
+                            <div class="p-3 flex flex-col flex-grow">
+                                <h3 class="text-xs md:text-sm font-bold text-ink line-clamp-2 mb-2 group-hover:text-brand-600">SIM Fisik Arab Saudi Kuota 5GB</h3>
+                                <div class="mt-auto">
+                                    <span class="text-[10px] text-slate-500 block mb-0.5">Mulai dari</span>
+                                    <div class="text-sm md:text-lg font-extrabold text-brand-600">Rp160.000</div>
+                                </div>
+                                <div class="mt-3 bg-brand-50 text-brand-600 text-xs text-center py-2 rounded-lg font-bold group-hover:bg-gradient-to-r group-hover:from-brand-start group-hover:to-brand-end group-hover:text-paper transition-all">
+                                    Pilih Paket
                                 </div>
                             </div>
                         </a>
 
-                        <!-- PRODUCT Fisik 2 -->
-                        <a href="#" class="group relative bg-paper rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-brand-500 transition-all duration-300 flex flex-col">
-                            <div class="relative aspect-square overflow-hidden bg-slate-100">
-                                <img src="https://placehold.co/500x500/E5E7EB/A1A1AA?text=SIM+Fisik+2" alt="SIM Card Fisik Nyaman" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
-                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                        Select Options
-                                    </div>
-                                </div>
+                        <!-- Produk Fisik 2 -->
+                        <a href="#" class="group bg-paper border border-slate-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors flex flex-col shadow-sm">
+                            <div class="aspect-square bg-slate-100 relative">
+                                <img src="https://placehold.co/400x400/E5E7EB/A1A1AA?text=Fisik+2" class="w-full h-full object-cover mix-blend-multiply" alt="SIM Fisik">
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <h3 class="text-sm font-bold text-ink mb-4 line-clamp-3 leading-snug group-hover:text-brand-600 transition-colors">SIM Card Fisik Haji Umroh Arab Saudi Kuota 10GB</h3>
-                                <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col">
-                                    <span class="text-xs text-slate-500 font-medium mb-1">Mulai dari:</span>
-                                    <span class="text-lg font-extrabold text-brand-600">Rp285.000</span>
+                            <div class="p-3 flex flex-col flex-grow">
+                                <h3 class="text-xs md:text-sm font-bold text-ink line-clamp-2 mb-2 group-hover:text-brand-600">SIM Fisik Arab Saudi Kuota 10GB</h3>
+                                <div class="mt-auto">
+                                    <span class="text-[10px] text-slate-500 block mb-0.5">Mulai dari</span>
+                                    <div class="text-sm md:text-lg font-extrabold text-brand-600">Rp285.000</div>
+                                </div>
+                                <div class="mt-3 bg-brand-50 text-brand-600 text-xs text-center py-2 rounded-lg font-bold group-hover:bg-gradient-to-r group-hover:from-brand-start group-hover:to-brand-end group-hover:text-paper transition-all">
+                                    Pilih Paket
                                 </div>
                             </div>
                         </a>
 
-                        <!-- PRODUCT Fisik 3 -->
-                        <a href="#" class="group relative bg-paper rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-brand-500 transition-all duration-300 flex flex-col">
-                            <div class="relative aspect-square overflow-hidden bg-slate-100">
-                                <img src="https://placehold.co/500x500/E5E7EB/A1A1AA?text=SIM+Fisik+3" alt="SIM Card Fisik Puas" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
-                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                        Select Options
-                                    </div>
-                                </div>
+                        <!-- Produk Fisik 3 -->
+                        <a href="#" class="group bg-paper border border-slate-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors flex flex-col shadow-sm">
+                            <div class="aspect-square bg-slate-100 relative">
+                                <img src="https://placehold.co/400x400/E5E7EB/A1A1AA?text=Fisik+3" class="w-full h-full object-cover mix-blend-multiply" alt="SIM Fisik">
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <h3 class="text-sm font-bold text-ink mb-4 line-clamp-3 leading-snug group-hover:text-brand-600 transition-colors">SIM Card Fisik Arab Saudi Umroh Haji Kuota 20GB</h3>
-                                <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col">
-                                    <span class="text-xs text-slate-500 font-medium mb-1">Mulai dari:</span>
-                                    <span class="text-lg font-extrabold text-brand-600">Rp410.000</span>
+                            <div class="p-3 flex flex-col flex-grow">
+                                <h3 class="text-xs md:text-sm font-bold text-ink line-clamp-2 mb-2 group-hover:text-brand-600">SIM Fisik Arab Saudi Kuota 20GB</h3>
+                                <div class="mt-auto">
+                                    <span class="text-[10px] text-slate-500 block mb-0.5">Mulai dari</span>
+                                    <div class="text-sm md:text-lg font-extrabold text-brand-600">Rp410.000</div>
+                                </div>
+                                <div class="mt-3 bg-brand-50 text-brand-600 text-xs text-center py-2 rounded-lg font-bold group-hover:bg-gradient-to-r group-hover:from-brand-start group-hover:to-brand-end group-hover:text-paper transition-all">
+                                    Pilih Paket
                                 </div>
                             </div>
                         </a>
 
-                        <!-- PRODUCT Fisik 4 -->
-                        <a href="#" class="group relative bg-paper rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-brand-500 transition-all duration-300 flex flex-col">
-                            <div class="relative aspect-square overflow-hidden bg-slate-100">
-                                <img src="https://placehold.co/500x500/E5E7EB/A1A1AA?text=SIM+Fisik+4" alt="SIM Card Fisik Unlimited" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div class="bg-gradient-to-r from-brand-start to-brand-end text-paper px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
-                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                                        Select Options
-                                    </div>
-                                </div>
+                        <!-- Produk Fisik 4 -->
+                        <a href="#" class="group bg-paper border border-slate-200 rounded-xl overflow-hidden hover:border-brand-500 transition-colors flex flex-col shadow-sm">
+                            <div class="aspect-square bg-slate-100 relative">
+                                <img src="https://placehold.co/400x400/E5E7EB/A1A1AA?text=Fisik+4" class="w-full h-full object-cover mix-blend-multiply" alt="SIM Fisik">
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
-                                <h3 class="text-sm font-bold text-ink mb-4 line-clamp-3 leading-snug group-hover:text-brand-600 transition-colors">SIM Card Fisik Arab Saudi Umroh Haji Unlimited Data</h3>
-                                <div class="mt-auto pt-4 border-t border-slate-100 flex flex-col">
-                                    <span class="text-xs text-slate-500 font-medium mb-1">Mulai dari:</span>
-                                    <span class="text-lg font-extrabold text-brand-600">Rp550.000</span>
+                            <div class="p-3 flex flex-col flex-grow">
+                                <h3 class="text-xs md:text-sm font-bold text-ink line-clamp-2 mb-2 group-hover:text-brand-600">SIM Fisik Arab Saudi Unlimited Data</h3>
+                                <div class="mt-auto">
+                                    <span class="text-[10px] text-slate-500 block mb-0.5">Mulai dari</span>
+                                    <div class="text-sm md:text-lg font-extrabold text-brand-600">Rp550.000</div>
+                                </div>
+                                <div class="mt-3 bg-brand-50 text-brand-600 text-xs text-center py-2 rounded-lg font-bold group-hover:bg-gradient-to-r group-hover:from-brand-start group-hover:to-brand-end group-hover:text-paper transition-all">
+                                    Pilih Paket
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-                
-                <p class="text-center text-sm text-slate-500 mt-12">*Harga dapat berubah sewaktu-waktu. Belum termasuk ongkos kirim untuk SIM Card Fisik.</p>
+
             </div>
         </section>
 
-        <!-- Cara Kerja (Proses) -->
-        <section id="cara-kerja" class="py-16 bg-brand-50/50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl font-bold text-ink mb-4">Cara Mudah Mendapatkan Akses</h2>
-                    <p class="text-slate-600">Tidak perlu repot cari counter kartu di bandara Saudi. Siapkan dari rumah.</p>
-                </div>
+        <!-- Video Panduan Section (Diperbarui dengan Brand Gradient) -->
+        <section class="py-16 md:py-24 bg-gradient-to-br from-brand-start to-brand-end overflow-hidden relative">
+            <!-- Elemen dekorasi background disesuaikan agar menyatu dengan hijau -->
+            <div class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-white rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-accent-500 rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
 
-                <div class="flex flex-col md:flex-row justify-center items-start gap-8 relative">
-                    <!-- Line connector -->
-                    <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 border-t-2 border-dashed border-brand-100"></div>
-
-                    <!-- Step 1 -->
-                    <div class="flex-1 text-center relative z-10">
-                        <div class="w-24 h-24 mx-auto bg-paper border-4 border-brand-100 rounded-full flex items-center justify-center text-brand-600 text-3xl font-bold mb-6 shadow-md">
-                            1
-                        </div>
-                        <h4 class="text-lg font-bold text-ink mb-2">Pilih & Bayar</h4>
-                        <p class="text-slate-600 text-sm">Pilih paket di website ini dan selesaikan pembayaran via transfer/e-wallet.</p>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="flex-1 text-center relative z-10">
-                        <div class="w-24 h-24 mx-auto bg-paper border-4 border-brand-100 rounded-full flex items-center justify-center text-brand-600 text-3xl font-bold mb-6 shadow-md">
-                            2
-                        </div>
-                        <h4 class="text-lg font-bold text-ink mb-2">Terima Paket</h4>
-                        <p class="text-slate-600 text-sm">Barcode eSIM dikirim via Email, atau fisik dikirim ke rumah Anda.</p>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="flex-1 text-center relative z-10">
-                        <div class="w-24 h-24 mx-auto bg-gradient-to-br from-brand-start to-brand-end border-4 border-brand-100 rounded-full flex items-center justify-center text-paper text-3xl font-bold mb-6 shadow-lg shadow-brand-500/40 transform scale-110">
-                            3
-                        </div>
-                        <h4 class="text-lg font-bold text-ink mb-2">Aktif di Saudi!</h4>
-                        <p class="text-slate-600 text-sm">Sinyal otomatis aktif saat pesawat Anda mendarat di Tanah Suci.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="py-16 bg-paper">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-ink">Pertanyaan Sering Diajukan</h2>
-                </div>
-                
-                <div class="space-y-4">
-                    <details class="group bg-paper border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer marker:content-[''] open:border-brand-300 open:ring-1 ring-brand-300 transition-all">
-                        <summary class="flex justify-between items-center font-bold text-ink outline-none">
-                            Apakah HP saya bisa pakai eSIM?
-                            <i class="ph-bold ph-caret-down transition group-open:rotate-180 text-brand-600"></i>
-                        </summary>
-                        <div class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                            Sebagian besar HP keluaran terbaru (iPhone XR ke atas, Samsung S20 ke atas) sudah mendukung eSIM. Anda bisa mengeceknya di pengaturan jaringan HP Anda. Jika tidak support, pilih opsi SIM Card fisik kami.
-                        </div>
-                    </details>
-
-                    <details class="group bg-paper border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer marker:content-[''] open:border-brand-300 open:ring-1 ring-brand-300 transition-all">
-                        <summary class="flex justify-between items-center font-bold text-ink outline-none">
-                            Apakah WhatsApp saya akan berubah nomor?
-                            <i class="ph-bold ph-caret-down transition group-open:rotate-180 text-brand-600"></i>
-                        </summary>
-                        <div class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                            TIDAK. Nomor WhatsApp Anda akan tetap sama. Paket ini murni data internet. Anda tetap bisa menggunakan nomor lama untuk berkirim pesan atau telepon via WhatsApp secara otomatis.
-                        </div>
-                    </details>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
                     
-                    <details class="group bg-paper border border-slate-200 rounded-2xl p-6 shadow-sm cursor-pointer marker:content-[''] open:border-brand-300 open:ring-1 ring-brand-300 transition-all">
-                        <summary class="flex justify-between items-center font-bold text-ink outline-none">
-                            Bagaimana jika kuota habis sebelum waktunya?
-                            <i class="ph-bold ph-caret-down transition group-open:rotate-180 text-brand-600"></i>
-                        </summary>
-                        <div class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                            Anda bisa melakukan isi ulang (Top Up) kuota kapan saja melalui website ini atau langsung menghubungi Customer Service kami via WhatsApp.
+                    <!-- Kolom Teks -->
+                    <div class="text-center md:text-left order-2 md:order-1">
+                        <!-- Badge pop-up diubah menggunakan latar putih dan teks hijau -->
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-paper text-brand-600 font-bold text-xs mb-6 shadow-sm">
+                            <i class="ph-fill ph-play-circle text-lg"></i> Lihat Buktinya
                         </div>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-paper leading-tight mb-6">
+                            Masih Ragu<br>Cara Pakainya?
+                        </h2>
+                        <!-- Teks menggunakan warna krem/putih terang -->
+                        <p class="text-base md:text-lg text-brand-50 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
+                            Biar video yang bicara. Lihat betapa tenangnya jamaah kami. <strong class="text-accent-500 font-bold">Tinggal scan barcode dari rumah</strong>, dan internet otomatis menyala saat pesawat mendarat di Tanah Suci. Tanpa bongkar HP, tanpa antre.
+                        </p>
+                        
+                        <!-- Mini Checklist Trust (Ikon diubah ke aksen emas/kuning agar kontras dengan hijau) -->
+                        <div class="space-y-3 text-sm text-paper font-medium max-w-sm mx-auto md:mx-0">
+                            <div class="flex items-center gap-3">
+                                <i class="ph-bold ph-check text-accent-500 text-lg"></i>
+                                <span>Kurang dari 2 menit pemasangan</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ph-bold ph-check text-accent-500 text-lg"></i>
+                                <span>Nomor WhatsApp lama aman</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ph-bold ph-check text-accent-500 text-lg"></i>
+                                <span>Aman digunakan oleh lansia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Video (Mockup HP) -->
+                    <div class="flex justify-center order-1 md:order-2">
+                        <!-- Bingkai HP gelap ini akan sangat menonjol di atas background hijau -->
+                        <div class="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[9/16] bg-slate-800 rounded-[2.5rem] p-2 sm:p-3 shadow-[0_20px_50px_rgba(0,0,0,0.4)] border border-brand-100/30 transform md:rotate-2 hover:rotate-0 transition-transform duration-500">
+                            
+                            <!-- Notch/Kamera HP Atas -->
+                            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 sm:h-7 bg-slate-800 rounded-b-3xl z-20 flex items-center justify-center">
+                                <div class="w-12 h-1.5 bg-slate-900 rounded-full"></div>
+                            </div>
+
+                            <!-- Layar Video -->
+                            <div class="relative w-full h-full bg-slate-900 rounded-[2rem] overflow-hidden pointer-events-none">
+                                <iframe 
+                                    class="absolute top-0 left-0 w-full h-full scale-[1.05]" 
+                                    src="https://www.youtube.com/embed/56GhkKfeLFw?autoplay=1&mute=1&loop=1&playlist=56GhkKfeLFw&controls=0&playsinline=1&rel=0&showinfo=0" 
+                                    title="Cara Penggunaan eSIM Umroh" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Keunggulan (Sekarang ada judul) -->
+        <section id="keunggulan" class="py-12 md:py-16 bg-paper border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Judul Baru Sesuai Request -->
+                <div class="text-center max-w-2xl mx-auto mb-8 md:mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-ink mb-3">Mengapa Menggunakan Paket Kami?</h2>
+                    <p class="text-sm md:text-base text-slate-600">Kami merancang pengalaman berinternet yang paling minim risiko agar ibadah Anda tidak terganggu urusan teknis.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <div class="w-12 h-12 bg-paper rounded-xl shadow-sm border border-slate-100 flex items-center justify-center mb-4">
+                            <i class="ph-fill ph-lightning text-brand-500 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-sm md:text-base text-ink mb-1">Langsung Aktif</h3>
+                        <p class="text-xs md:text-sm text-slate-500">Otomatis nyala saat mendarat.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <div class="w-12 h-12 bg-paper rounded-xl shadow-sm border border-slate-100 flex items-center justify-center mb-4">
+                            <i class="ph-fill ph-wallet text-brand-500 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-sm md:text-base text-ink mb-1">Harga Jujur</h3>
+                        <p class="text-xs md:text-sm text-slate-500">Beli putus, tanpa biaya siluman.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <div class="w-12 h-12 bg-paper rounded-xl shadow-sm border border-slate-100 flex items-center justify-center mb-4">
+                            <i class="ph-fill ph-shield-check text-brand-500 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-sm md:text-base text-ink mb-1">Sinyal Prioritas</h3>
+                        <p class="text-xs md:text-sm text-slate-500">Jaringan STC, Zain, & Mobily.</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <div class="w-12 h-12 bg-paper rounded-xl shadow-sm border border-slate-100 flex items-center justify-center mb-4">
+                            <i class="ph-fill ph-headset text-brand-500 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-sm md:text-base text-ink mb-1">Bantuan 24/7</h3>
+                        <p class="text-xs md:text-sm text-slate-500">CS sigap via WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cara Kerja -->
+        <section id="cara-kerja" class="py-12 bg-brand-50/50 border-y border-brand-100/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6 md:mb-8 text-center md:text-left">
+                    <h2 class="text-xl md:text-2xl font-bold text-ink">3 Langkah Mudah</h2>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                    <div class="bg-paper p-5 md:p-6 rounded-2xl border border-slate-200 relative">
+                        <div class="absolute -top-3 -left-3 w-8 h-8 md:w-10 md:h-10 bg-ink text-paper rounded-full flex items-center justify-center font-bold text-sm md:text-base shadow-sm">1</div>
+                        <h4 class="text-sm md:text-base font-bold text-ink mb-1 mt-2">Pilih & Bayar</h4>
+                        <p class="text-xs md:text-sm text-slate-500">Bayar instan via e-wallet/transfer.</p>
+                    </div>
+
+                    <div class="bg-paper p-5 md:p-6 rounded-2xl border border-slate-200 relative">
+                        <div class="absolute -top-3 -left-3 w-8 h-8 md:w-10 md:h-10 bg-ink text-paper rounded-full flex items-center justify-center font-bold text-sm md:text-base shadow-sm">2</div>
+                        <h4 class="text-sm md:text-base font-bold text-ink mb-1 mt-2">Terima Paket</h4>
+                        <p class="text-xs md:text-sm text-slate-500">eSIM dikirim email. Fisik ke rumah.</p>
+                    </div>
+
+                    <div class="bg-paper p-5 md:p-6 rounded-2xl border-2 border-brand-500 relative col-span-2 md:col-span-1 shadow-sm">
+                        <div class="absolute -top-3 -left-3 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-brand-start to-brand-end text-paper rounded-full flex items-center justify-center font-bold text-sm md:text-base shadow-md">3</div>
+                        <h4 class="text-sm md:text-base font-bold text-ink mb-1 mt-2">Otomatis Aktif</h4>
+                        <p class="text-xs md:text-sm text-slate-500">Mendarat di Saudi, sinyal langsung nyala.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Minimalis -->
+        <section class="py-12 bg-paper pb-28 md:pb-16">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-xl md:text-2xl font-bold text-ink">Tanya Jawab</h2>
+                </div>
+                <div class="space-y-3">
+                    <details class="bg-slate-50 rounded-xl p-4 md:p-5 cursor-pointer marker:content-[''] border border-slate-100 hover:border-brand-300 transition-colors">
+                        <summary class="flex justify-between items-center font-bold text-sm md:text-base text-ink outline-none">
+                            HP saya bisa pakai eSIM? <i class="ph-bold ph-caret-down text-brand-600"></i>
+                        </summary>
+                        <p class="mt-3 text-xs md:text-sm text-slate-600 border-t border-slate-200 pt-3">iPhone XR ke atas dan Samsung S20 ke atas umumnya bisa. Jika ragu, silakan pilih SIM Fisik.</p>
+                    </details>
+                    <details class="bg-slate-50 rounded-xl p-4 md:p-5 cursor-pointer marker:content-[''] border border-slate-100 hover:border-brand-300 transition-colors">
+                        <summary class="flex justify-between items-center font-bold text-sm md:text-base text-ink outline-none">
+                            Nomor WA berubah tidak? <i class="ph-bold ph-caret-down text-brand-600"></i>
+                        </summary>
+                        <p class="mt-3 text-xs md:text-sm text-slate-600 border-t border-slate-200 pt-3">TIDAK. Nomor lama tetap bisa dipakai WA seperti biasa tanpa perlu diubah pengaturannya.</p>
                     </details>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-ink text-slate-300 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-brand-start to-brand-end rounded-lg flex items-center justify-center text-paper font-bold">D</div>
-                        <span class="font-bold text-xl text-paper tracking-tight">Digitravel</span>
-                    </div>
-                    <p class="text-sm text-slate-400 mb-4 max-w-sm">Mitra konektivitas terpercaya untuk perjalanan ibadah Umroh dan Haji Anda. Mudah, Jujur, dan Amanah.</p>
-                </div>
-                <div>
-                    <h4 class="text-paper font-bold mb-4">Layanan</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-brand-500 transition">Paket eSIM Umroh</a></li>
-                        <li><a href="#" class="hover:text-brand-500 transition">SIM Card Fisik Arab Saudi</a></li>
-                        <li><a href="#" class="hover:text-brand-500 transition">Top Up Kuota</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-paper font-bold mb-4">Bantuan</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="https://wa.me/6281234567890" class="hover:text-brand-500 transition flex items-center gap-2"><i class="ph-fill ph-whatsapp text-[#25D366]"></i> Hubungi CS (24/7)</a></li>
-                        <li><a href="#" class="hover:text-brand-500 transition">Syarat & Ketentuan</a></li>
-                        <li><a href="#" class="hover:text-brand-500 transition">Kebijakan Privasi</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center text-sm text-slate-500 pt-8 border-t border-slate-800/50">
-                &copy; <span id="year"></span> Digitravel. All rights reserved.
-                <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-            </div>
-        </div>
-    </footer>
-
     <!-- Mobile Sticky CTA -->
-    <div class="md:hidden fixed bottom-0 left-0 w-full bg-paper border-t border-slate-200 p-3 flex gap-3 z-50 pb-safe">
-        <a href="https://wa.me/6281234567890" class="flex items-center justify-center w-12 h-12 bg-[#25D366]/10 rounded-xl border border-[#25D366]/30 text-[#25D366]">
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-paper border-t border-slate-200 p-3 flex gap-3 z-50 pb-safe shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.05)]">
+        <a href="https://wa.me/6281234567890" class="flex items-center justify-center w-12 h-12 bg-[#25D366] rounded-xl text-white shadow-md shadow-[#25D366]/30 active:scale-95 transition-transform">
             <i class="ph-fill ph-whatsapp text-2xl"></i>
         </a>
-        <a href="#paket" class="flex-1 bg-gradient-to-r from-brand-start to-brand-end text-paper rounded-xl flex items-center justify-center font-bold shadow-lg shadow-brand-500/20">
+        <a href="#paket" class="flex-1 bg-gradient-to-r from-brand-start to-brand-end text-paper rounded-xl flex items-center justify-center font-bold shadow-lg shadow-brand-500/30 text-sm active:scale-95 transition-transform">
             Beli Paket Sekarang
         </a>
     </div>
 
-    <!-- Padding for safe area in modern iPhones -->
     <style>
         @supports (padding-bottom: env(safe-area-inset-bottom)) {
-            .pb-safe {
-                padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
-            }
+            .pb-safe { padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
         }
     </style>
 </body>
